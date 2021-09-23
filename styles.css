@@ -1,0 +1,22 @@
+#grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 50vw;
+  border: thick solid black;
+}
+
+button {
+  background: transparent;
+  border: none !important;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.square {
+  margin: 0%;
+  border: thin;
+  aspect-ratio: 1;
+}
