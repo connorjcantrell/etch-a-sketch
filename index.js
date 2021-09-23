@@ -5,7 +5,7 @@ const rootEl = document.querySelector('#root')
 
 function generateArtboard(rows, columns) {
     let artboardEl = document.createElement('div')
-    artboardEl.setAttribute('id', 'grid')
+    artboardEl.setAttribute('id', 'artboard')
     artboardEl.style.display = 'grid'
     artboardEl.style.gridTemplate = `${ROWS} ${COLUMNS} auto`
     for (let row = 0; row < rows; row++) {
