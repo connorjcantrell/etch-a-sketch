@@ -3,11 +3,11 @@ const COLUMNS = 16
 
 const rootEl = document.querySelector('#root')
 
-function generateArtboard(rows, columns) {
-    let artboardEl = document.createElement('div')
-    artboardEl.setAttribute('id', 'artboard')
-    artboardEl.style.display = 'grid'
-    artboardEl.style.gridTemplate = `${ROWS} ${COLUMNS} auto`
+function generateGrid(rows, columns) {
+    let gridEl = document.createElement('div')
+    gridEl.setAttribute('id', 'grid')
+    gridEl.style.display = 'grid'
+    gridEl.style.gridTemplate = `${ROWS} ${COLUMNS} auto`
     for (let row = 0; row < rows; row++) {
         for (let col = 0; col < columns; col++) {
             let id = row * ROWS + col
@@ -21,15 +21,15 @@ function generateArtboard(rows, columns) {
                 squareDiv.style.background = 'black'
             })
             squareDiv.appendChild(buttonEl)
-            artboardEl.appendChild(squareDiv)
+            gridEl.appendChild(squareDiv)
         }
     }
-    return artboardEl
+    return gridEl
 } 
 
 function main() {
-    let artboardEl = generateArtboard(ROWS, COLUMNS)
-    rootEl.appendChild(artboardEl)
+    let grid = generateGrid(ROWS, COLUMNS)
+    rootEl.appendChild(grid)
 }
 
 main()
