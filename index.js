@@ -5,17 +5,17 @@ const rootEl = document.querySelector('#root')
 
 function generateArtboard(rows, columns) {
     let artboardEl = document.createElement('div')
-    artboardEl.setAttribute('id', 'artboard')
-    artboardEl.style.display = 'artboard'
-    artboardEl.style.artboardTemplate = `${ROWS} ${COLUMNS} auto`
+    artboardEl.setAttribute('id', 'grid')
+    artboardEl.style.display = 'grid'
+    artboardEl.style.gridTemplate = `${ROWS} ${COLUMNS} auto`
     for (let row = 0; row < rows; row++) {
         for (let col = 0; col < columns; col++) {
             let id = row * ROWS + col
             let squareDiv = document.createElement('div')
             squareDiv.setAttribute('class', 'square')
             squareDiv.setAttribute('id', `${id}`)
-            squareDiv.style.artboardRow = `${row + 1}`
-            squareDiv.style.artboardColumn = `${col + 1}`
+            squareDiv.style.gridRow = `${row + 1}`
+            squareDiv.style.gridColumn = `${col + 1}`
             buttonEl = document.createElement('button')
             buttonEl.addEventListener('mouseover', function() {
                 squareDiv.style.background = 'black'
@@ -28,8 +28,8 @@ function generateArtboard(rows, columns) {
 } 
 
 function main() {
-    let artboard = generateArtboard(ROWS, COLUMNS)
-    rootEl.appendChild(artboard)
+    let artboardEl = generateArtboard(ROWS, COLUMNS)
+    rootEl.appendChild(artboardEl)
 }
 
 main()
