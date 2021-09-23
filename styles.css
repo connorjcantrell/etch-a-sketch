@@ -6,10 +6,20 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
+h1 {
+  margin-bottom: 50px;
+  font-size: 2.5em;
+  text-align: center;
+}
+
 #grid {
+  display: grid;
   width: 50vw;
   height: 50vw;
   border: thick solid black;
+}
+.square {
+  aspect-ratio: 1;
 }
 
 button {
@@ -18,9 +28,4 @@ button {
   font-size: 0;
   width: 100%;
   height: 100%;
-}
-
-.square {
-  margin: 0%;
-  aspect-ratio: 1;
 }

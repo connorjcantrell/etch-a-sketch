@@ -6,7 +6,6 @@ const rootEl = document.querySelector('#root')
 function generateGrid(rows, columns) {
     let gridEl = document.createElement('div')
     gridEl.setAttribute('id', 'grid')
-    gridEl.style.display = 'grid'
     gridEl.style.gridTemplate = `${ROWS} ${COLUMNS} auto`
     for (let row = 0; row < rows; row++) {
         for (let col = 0; col < columns; col++) {
