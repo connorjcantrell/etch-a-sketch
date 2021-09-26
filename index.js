@@ -33,16 +33,6 @@ function random255() {
 }
 
 function main() {
-    bodyEl.addEventListener('mouseover', event => {
-        if (event.target === squareDivs) {
-            let squareDiv = document.querySelector(`#${event.target.id}`)
-            if (rainbowInputEl.checked) {
-                squareDiv.style.backgroundColor = `rgb(${random255()},${random255()},${random255()}, 1)`
-            } else {
-                squareDiv.style.backgroundColor = 'black'
-            }
-        }
-    })
     let grid = generateGrid(ROWS, COLUMNS)
     rootEl.appendChild(grid)
     resetButtonEl.addEventListener('click', function() {
@@ -55,6 +45,16 @@ function main() {
         grid = generateGrid(resolution, resolution)
         rootEl.appendChild(grid)
     })
+    rootEl.addEventListener('mouseover', e => {
+        if (e.target.classList.contains('square')) {
+            if (rainbowInputEl.checked) {
+                e.target.style.background = `rgb(${random255()},${random255()},${random255()}, 1)`
+            } else {
+                e.target.style.background = 'black';
+            }
+        }
+    })
 }
 
 main()
+
