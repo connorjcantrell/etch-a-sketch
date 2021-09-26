@@ -13,14 +13,6 @@ body {
   border: thick solid black;
 }
 
-.hidden-btn {
-  background: transparent;
-  border: none !important;
-  font-size: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .square {
   aspect-ratio: 1fr;
 }
