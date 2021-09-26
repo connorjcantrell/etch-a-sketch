@@ -25,7 +25,6 @@ function generateGrid(rows, columns, color) {
                 } else {
                     squareDiv.style.backgroundColor = color
                 }
-                console.log(window.getComputedStyle(squareDiv).backgroundColor)
             })
             gridEl.appendChild(squareDiv)
         }
@@ -43,7 +42,6 @@ function main() {
     resetButtonEl.addEventListener('click', function() {
         let color = 'black'
         if (rainbowInputEl.checked === true) {
-            console.log('entered if')
             color = 'rainbow'
         }
         // delete all contents in root element
