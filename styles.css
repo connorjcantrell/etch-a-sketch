@@ -16,3 +16,8 @@ body {
 .square {
   aspect-ratio: 1fr;
 }
+
+input,
+button {
+  margin-top: 20px;
+}
